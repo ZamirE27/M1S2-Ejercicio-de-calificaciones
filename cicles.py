@@ -2,6 +2,9 @@ print("="*50)
 print("||          REVICION DE TUS CALIFICACIONES      ||")
 print("="*50 )
 
+print("="*50)
+print("||              APROVADO/REPROBADO              ||")
+print("="*50 )
 
 while True:
     finalGrade = input("Intoduce la nota final en un rango del (0 a 100): ").strip()
@@ -24,8 +27,8 @@ print("="*50)
 print("||           PROMEDIA TUS CALIFICACIONES        ||")
 print("="*50) 
          
-     
-grades = []
+ 
+grades = [] 
 while True:
     inputGrade = input("Introduce las calificaciones en un rango del (0 a 100): ").split(",")
     try:
@@ -41,7 +44,9 @@ while True:
     except:
         print(f"ERROR: El valor ({wrongValue}) contiene letras o caracteres especiales")
         print(f"Datos correctos ({grades})")
-        print(f"Favor continuar desde el ultimo valor ingresado: {grades[-1]})")
+        if grades:
+            print(f"Favor continuar desde el ultimo valor ingresado: {grades[-1]})")
+       # print(f"Favor continuar desde el ultimo valor ingresado: {grades[-1]})")
 
         
 
@@ -50,24 +55,54 @@ for x in grades:
     print(f"{round(val,2)}")
     break
 
-x=0
-count=0
-while True:
-    specificValue = input("Introduce una calificacion especifica: ").strip()
-    try: 
-        vlSpecificValue = float(specificValue)                     
-        if vlSpecificValue == grades[x-1]:
-            repetitive += 1
-        if vlSpecificValue >= grades[x-1]:
-            count = count + 1 
-        elif x >= len(grades):
-            print(x)
-            x += 1
-        break        
+# repetitive=0
+
+#                 count +=1
+                      
+#                 if count+1 > len(grades):
+#                     break
+                    
+#             else: 
+#                 print(f"ERROR: El valor ({vlSpecificValue}) no coincide con ningun valor ingresado anteriormente")
+#         else:
+#             print(f"ERROR: El valor ({vlSpecificValue}) esta duera del rango permitido")
+#     except:
+#         print(f"ERROR: el valor ingresado ({specificValue}) contiene letras o caracteres especiales")
+#         specificValue = input("favor intentelo nuevamente\n")
         
-    except:
-        print(f"ERROR: el valor ingresado ({specificValue}) contiene letras o caracteres especiales, favor intentelo nuevamente\n")
+# print("repetidos", repetitive)
+
+
+
+
+# repetitive=0
+# count=0
+# print(len(grades))
+
+# print("la lista",grades)
+
+# specificValue = input("Introduce una calificacion especifica: ").strip()
+# vlSpecificValue = float(specificValue) 
+# print("xcxc",vlSpecificValue)
+# while True:
+
+    
+#     if count+1 > len(grades):
+#         break
+      
+#     if vlSpecificValue == grades[count-1]:
+#         repetitive += 1
+#     count +=1
         
-print(grades)
+    
+# print("repetidos", repetitive)
+  
+       
+
+# print("mayores", count)
    
+
+    # try: 
+    # except:
+    #     print(f"ERROR: el valor ingresado ({specificValue}) contiene letras o caracteres especiales, favor intentelo nuevamente\n")
    
