@@ -31,7 +31,7 @@ print("="*50)
 # Creamos una lista o array que almacenara todos los datos ingresados 
 grades = [] 
 while True:
-    inputGrade = input("Introduce las calificaciones en un rango del (0 a 100): ").split(",") # Esta es una lista temporal que nos almacenara los datos ingresado en str 
+    inputGrade = input("Introduce las calificaciones en un rango del (0 a 100) y separalas por comas (','): ").split(",") # Esta es una lista temporal que nos almacenara los datos ingresado en str 
                                                                                     # por medio del .split(,) nos aseguramos que los dats ingresados en el array se distingan o separen por una coma para asi almacenarlos individualmente.
     try:
         # Usamos un for para recorrer la lista y que el identador auma y almacene el valor del dato ingresado, el cual convertiremos a un float()
@@ -68,7 +68,7 @@ while breaker == True:
     specificValue = input("Introduce una calificacion especifica dentro de las ya insgredas anteriormente: ").strip()
     try: 
         vlSpecificValue = float(specificValue) 
-        if 0 < vlSpecificValue < 100:
+        if 0 < vlSpecificValue <= 100:
             if vlSpecificValue in grades:
                 breaker = False
 
@@ -85,7 +85,10 @@ while breaker == True:
                 for repeated in grades:
                     if repeated == vlSpecificValue :
                         count += 1
-                print(f"La calificacion: {vlSpecificValue} se repite {count} veces")
+                if count == 1:
+                    print(f"La calificacion: {vlSpecificValue} se repite {count} vez)")
+                else:
+                    print(f"La calificacion: {vlSpecificValue} se repite {count} veces)")    
                 """
                 # este while se uso para validar cuantas vesces se repite un numero dentro de la lista, sin embargo el ejercicio solicito un loop for.
                 while True:    
